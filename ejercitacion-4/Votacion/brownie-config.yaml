@@ -1,0 +1,2 @@
+dotenv: .env
+deployer_sepolia: ${PK}
