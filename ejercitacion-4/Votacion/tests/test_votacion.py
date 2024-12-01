@@ -1,4 +1,4 @@
-from brownie import Votacion, accounts, config, network
+from brownie import Votacion, accounts, config, network, reverts
 import pytest 
 
 @pytest.fixture
@@ -22,5 +22,5 @@ def test_double_vote(votacion):
     tx = votacion.vote(0, {'from': account})
     tx.wait(1)
     assert tx.status == 1
-    with pytest.raises(Exception):
+    with reverts("Already voted."):
         votacion.vote(0, {'from': account})
