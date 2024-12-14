@@ -1,0 +1,7 @@
+[package]
+name = "ejercicio_3"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cargo-tarpaulin = "0.31.3"
