@@ -4,6 +4,8 @@
 mod votacion {
 
     use ink::storage::Mapping;
+    use scale_info::prelude::vec::Vec;
+    use scale_info::prelude::string::String;
 
     #[ink(storage)]
     pub struct Votacion {
